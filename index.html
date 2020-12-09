@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html lang="cat">
+
+<head>
+ 
+    <meta charset="UTF-8"> 
+    <meta name="author" content="Carlota Sas">
+    <meta name="description" content="E-commerce de llibres">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Llegim.cat</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+    <!-- efectes amb JS -->
+    <script src="js/efectes.js"></script>
+     <!-- llibreria icones -->
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+     <!-- Google Fonts -->
+     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300&family=Merriweather:wght@400;700&display=swap" rel="stylesheet">
+     <!-- POSAR ESTILS PROPIS AL FINAL!! -->
+     <link rel="stylesheet" type="text/css" href="css/estils.css">
+
+</head>
+
+<body>
+    <nav class="navbar m-o p-0 fixed-top">
+        <a href="#" class="navbar-brand col-6 col-md-4 col-xl-2 m-0 h-100">
+            <img class="logo-brand" src="img/logo.svg">
+        </a>
+
+        <div class="caixa col-4 d-none d-xl-flex h-100">
+            <form action="#" class="form-inline">
+                <input type="text" placeholder="Busca el teu llibre" class="form-control">
+                <button class="btn btn-success" type="submit"><i class="fas fa-search"></i></button>
+            </form>
+        </div>
+
+        <a href="#" class="col-3 col-md-2 h-100" role="button" data-toggle="modal" data-target="#modalUsuari" id="perfil"><i class="fas fa-user"></i></a>
+        <!-- El modal està posicionat al final del tag body -->
+
+        <a href="#" class="col-2 d-none d-md-flex h-100" id="botiga"><i class="fas fa-shopping-basket"></i></a>
+        
+        <a href="#" class="navbar-toggler col-3 col-md-4 col-xl-2 h-100" role="button" data-toggle="collapse" data-target="#menu" id="burger">
+                <i class="fas fa-bars"></i>
+        </a>
+        <!-- Collapse --> 
+            <div class="collapse navbar-collapse" id="menu">
+                <ul class="navbar-nav">
+                    <li class="nav-item col-12 d-xl-none">
+                        <div class="caixa bg-transparent">
+                            <form action="#" class="form-inline nav-link">
+                                <input type="text" placeholder="Busca el teu llibre" class="form-control">
+                                <button class="btn btn-success d-xs-inline-block" type="submit"><i class="fas fa-search pt-md-2"></i></button>
+                            </form>
+                        </div>
+                    </li>
+                    <li class="nav-item d-md-none"><a href="#" class="nav-link"><i class="fas fa-shopping-basket"></i> Botiga</a></li>
+                    <div class="dropdown-divider d-xl-none"></div>
+                    <li class="nav-item"><a class="nav-link" href="#">Qui som</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Llibreries</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Catàleg</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Recomanacions</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Termes i condicions</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Contacte</a></li>
+                </ul>
+            </div>
+    </nav>
+
+    <section class="portada">
+        <img src="img/portada.jpg" cover>
+        <h1>Tenim totes les històries
+            <span
+               class="txt-rotate"
+               data-period="2000"
+               data-rotate='[ "que busques.", "increïbles.", "actuals.", "de por.", "sorprenents." ]'>
+            </span>
+        </h1>
+    </section>
+
+    <section class="filtres row">
+
+        <a href="#" class="filtre col-4 h-100" role="button" data-toggle="collapse" data-target="#alfabet" aria-expanded="false" aria-controls="#alfabet">Filtra per autor</a>
+        
+        <a href="#" class="filtre noActiu col-4 h-100" role="button" data-toggle="collapse" data-target="#categoria" aria-expanded="false" aria-controls="#categoria">Filtra per categoria</a>
+
+        <a href="#" class="filtre noActiu col-4 h-100" role="button" data-toggle="collapse" data-target="#negoci" aria-expanded="false" aria-controls="#negoci">Filtra per llibreria</a>
+        
+        <div class="collapse multi-collapse" id="alfabet">
+            <ul class="list-group">
+                    <li class="list-group-item col-2"><a href="#">A</a></li>
+                    <li class="list-group-item col-2"><a href="#">B</a></li>
+                    <li class="list-group-item col-2"><a href="#">C</a></li>
+                    <li class="list-group-item col-2"><a href="#">D</a></li>
+                    <li class="list-group-item col-2"><a href="#">E</a></li>
+                    <li class="list-group-item col-2"><a href="#">F</a></li>
+                    <li class="list-group-item col-2"><a href="#">G</a></li>
+                    <li class="list-group-item col-2"><a href="#">H</a></li>
+                    <li class="list-group-item col-2"><a href="#">I</a></li>
+                    <li class="list-group-item col-2"><a href="#">J</a></li>
+                    <li class="list-group-item col-2"><a href="#">K</a></li>
+                    <li class="list-group-item col-2"><a href="#">L</a></li>
+                    <li class="list-group-item col-2"><a href="#">M</a></li>
+                    <li class="list-group-item col-2"><a href="#">N</a></li>
+                    <li class="list-group-item col-2"><a href="#">O</a></li>
+                    <li class="list-group-item col-2"><a href="#">P</a></li>
+                    <li class="list-group-item col-2"><a href="#">Q</a></li>
+                    <li class="list-group-item col-2"><a href="#">R</a></li>
+                    <li class="list-group-item col-2"><a href="#">S</a></li>
+                    <li class="list-group-item col-2"><a href="#">T</a></li>
+                    <li class="list-group-item col-2"><a href="#">U</a></li>
+                    <li class="list-group-item col-2"><a href="#">V</a></li>
+                    <li class="list-group-item col-2"><a href="#">W</a></li>
+                    <li class="list-group-item col-2"><a href="#">X</a></li>
+                    <li class="list-group-item col-2"><a href="#">Y</a></li>
+                    <li class="list-group-item col-2"><Z href="#">Z</a></li>
+            </ul>
+        </div>
+
+        <div class="collapse multi-collapse" id="categoria">
+            <ul class="list-group">
+                    <li class="list-group-item col-3"><a href="#" class="pl-2 pl-md-4 pl-xl-5">Assaig</a></li>
+                    <li class="list-group-item col-3"><a href="#" class="pl-2 pl-md-4 pl-xl-5">Arts</a></li>
+                    <li class="list-group-item col-3"><a href="#" class="pl-2 pl-md-4 pl-xl-5">Biografies</a></li>
+                    <li class="list-group-item col-3"><a href="#" class="pl-2 pl-md-4 pl-xl-5">Ciència</a></li>
+                    <li class="list-group-item col-3"><a href="#" class="pl-2 pl-md-4 pl-xl-5">Clàssics</a></li>
+                    <li class="list-group-item col-3"><a href="#" class="pl-2 pl-md-4 pl-xl-5">Còmics</a></li>
+                    <li class="list-group-item col-3"><a href="#" class="pl-2 pl-md-4 pl-xl-5">Cuina</a></li>
+                    <li class="list-group-item col-3"><a href="#" class="pl-2 pl-md-4 pl-xl-5">Economia</a></li>
+                    <li class="list-group-item col-3"><a href="#" class="pl-2 pl-md-4 pl-xl-5">Història</a></li>
+                    <li class="list-group-item col-3"><a href="#" class="pl-2 pl-md-4 pl-xl-5">Idiomes</a></li>
+                    <li class="list-group-item col-3"><a href="#" class="pl-2 pl-md-4 pl-xl-5">Juvenil</a></li>
+                    <li class="list-group-item col-3"><a href="#" class="pl-2 pl-md-4 pl-xl-5">Misteri</a></li>
+                    <li class="list-group-item col-3"><a href="#" class="pl-2 pl-md-4 pl-xl-5">Narrativa</a></li>
+                    <li class="list-group-item col-3"><a href="#" class="pl-2 pl-md-4 pl-xl-5">No ficció</a></li>
+                    <li class="list-group-item col-3"><a href="#" class="pl-2 pl-md-4 pl-xl-5">Infantil</a></li>
+                    <li class="list-group-item col-3"><a href="#" class="pl-2 pl-md-4 pl-xl-5">Poesia</a></li>
+                    <li class="list-group-item col-3"><a href="#" class="pl-2 pl-md-4 pl-xl-5">Superventes</a></li>
+                    <li class="list-group-item col-3"><a href="#" class="pl-2 pl-md-4 pl-xl-5">Teatre</a></li>
+                    <li class="list-group-item col-3"><a href="#" class="pl-2 pl-md-4 pl-xl-5">Tradicions</a></li>
+                    <li class="list-group-item col-3"><a href="#" class="pl-2 pl-md-4 pl-xl-5">Viatges</a></li>
+            </ul>
+        </div>
+
+        <div class="collapse multi-collapse" id="negoci">
+            <ul class="list-group">
+                    <li class="list-group-item col-6 col-md-4 col-xl-3"><a href="#" class="pl-3 pl-md-4 pl-xl-5">Casa Usher Llibreters</a></li>
+                    <li class="list-group-item col-6 col-md-4 col-xl-3"><a href="#" class="pl-3 pl-md-4 pl-xl-5">Llibreria Cactus</a></li>
+                    <li class="list-group-item col-6 col-md-4 col-xl-3"><a href="#" class="pl-3 pl-md-4 pl-xl-5">Llibreria Calders</a></li>
+                    <li class="list-group-item col-6 col-md-4 col-xl-3"><a href="#" class="pl-3 pl-md-4 pl-xl-5">Llibreria Documenta</a></li>
+                    <li class="list-group-item col-6 col-md-4 col-xl-3"><a href="#" class="pl-3 pl-md-4 pl-xl-5">Llibreria El Gat Pelut</a></li>
+                    <li class="list-group-item col-6 col-md-4 col-xl-3"><a href="#" class="pl-3 pl-md-4 pl-xl-5">Llibreria La Caníbal</a></li>
+                    <li class="list-group-item col-6 col-md-4 col-xl-3"><a href="#" class="pl-3 pl-md-4 pl-xl-5">Llibreria La Memòria</a></li>
+                    <li class="list-group-item col-6 col-md-4 col-xl-3"><a href="#" class="pl-3 pl-md-4 pl-xl-5">Llibreria La Impossible</a></li>
+                    <li class="list-group-item col-6 col-md-4 col-xl-3"><a href="#" class="pl-3 pl-md-4 pl-xl-5">Llibreria La Tribu</a></li>
+                    <li class="list-group-item col-6 col-md-4 col-xl-3"><a href="#" class="pl-3 pl-md-4 pl-xl-5">Llibreria Laie</a></li>
+                    <li class="list-group-item col-6 col-md-4 col-xl-3"><a href="#" class="pl-3 pl-md-4 pl-xl-5">Llibreria Le Nuvole</a></li>
+                    <li class="list-group-item col-6 col-md-4 col-xl-3"><a href="#" class="pl-3 pl-md-4 pl-xl-5">Llibreria Obaga</a></li>
+                    <li class="list-group-item col-6 col-md-4 col-xl-3"><a href="#" class="pl-3 pl-md-4 pl-xl-5">Llibreria Ona</a></li>
+                    <li class="list-group-item col-6 col-md-4 col-xl-3"><a href="#" class="pl-3 pl-md-4 pl-xl-5">Nollegiu</a></li>
+                    <li class="list-group-item col-6 col-md-4 col-xl-3"><a href="#" class="pl-3 pl-md-4 pl-xl-5">Novecento Llibres</a></li>
+                    <li class="list-group-item col-6 col-md-4 col-xl-3"><a href="#" class="pl-3 pl-md-4 pl-xl-5">Tuuu Llibreria</a></li>
+            </ul>
+        </div>
+
+    </section>
+
+    <section class="llibres row p-5 p-md-4 p-xl-5 justify-content-center justify-content-md-around">
+
+        <div class="card mb-5">
+            <a href="#"><img class="card-img-top" src="img/canto.jpg"></a>
+            <div class="card-body">
+                <h3 class="card-title">Canto jo</h3>
+                <p class="card-text">Irene Solà</p>
+                <p class="badge badge-pill">16,05€</p>
+            </div>
+        </div>
+
+        <div class="card mb-5">
+            <a href="#"><img class="card-img-top" src="img/cap.jpg"></a>
+            <div class="card-body">
+                <h3 class="card-title">Cap altre amic</h3>
+                <p class="card-text">Behrouz Boochani</p>
+                <p class="badge badge-pill">23,95€</p>
+            </div>
+        </div>
+
+        <div class="card mb-5">
+            <a href="#"><img class="card-img-top" src="img/dolca.jpg"></a>
+            <div class="card-body">
+                <h3 class="card-title">Dolça introducció al caos</h3>
+                <p class="card-text">Marta Orriols</p>
+                <p class="badge badge-pill">17,50€</p>
+            </div>
+        </div>
+
+        <div class="card mb-5">
+            <a href="#"><img class="card-img-top" src="img/elpescador.jpg"></a>
+            <div class="card-body">
+                <h3 class="card-title">El pescador </h3>
+                <p class="card-text">Patrick Lambal, Jordi Tomàs</p>
+                <p class="badge badge-pill">18,00€</p>
+            </div>
+        </div>
+
+        <div class="card mb-5">
+            <a href="#"><img class="card-img-top" src="img/elsol.jpg"></a>
+            <div class="card-body">
+                <h3 class="card-title">El sol i les seves flors</h3>
+                <p class="card-text">Rapi Kaur</p>
+                <p class="badge badge-pill">14,90€</p>
+            </div>
+        </div>
+
+        <div class="card mb-5">
+            <a href="#"><img class="card-img-top" src="img/ha.jpg"></a>
+            <div class="card-body">
+                <h3 class="card-title">Ha anat així</h3>
+                <p class="card-text">Natalia Ginzburg</p>
+                <p class="badge badge-pill">19,45€</p>
+            </div>
+        </div>
+
+        <div class="card mb-5">
+            <a href="#"><img class="card-img-top" src="img/ignot.jpg"></a>
+            <div class="card-body">
+                <h3 class="card-title">Ignot</h3>
+                <p class="card-text">Manuel Baixauli</p>
+                <p class="badge badge-pill">18,00€</p>
+            </div>
+        </div>
+
+        <div class="card mb-5">
+            <a href="#"><img class="card-img-top" src="img/ladversari.jpg"></a>
+            <div class="card-body">
+                <h3 class="card-title">L'adversari</h3>
+                <p class="card-text">Emmanuel Carrère</p>
+                <p class="badge badge-pill">18,90€</p>
+            </div>
+        </div>
+
+        <div class="card mb-5">
+            <a href="#"><img class="card-img-top" src="img/lametamorfosi.jpg"></a>
+            <div class="card-body">
+                <h3 class="card-title">La metamorfosi</h3>
+                <p class="card-text">Franz Kafka</p>
+                <p class="badge badge-pill">19,00€</p>
+            </div>
+        </div>
+
+        <div class="card mb-5">
+            <a href="#"><img class="card-img-top" src="img/lasega.jpg"></a>
+            <div class="card-body">
+                <h3 class="card-title">La Sega</h3>
+                <p class="card-text">Martí Domínguez</p>
+                <p class="badge badge-pill">18,50€</p>
+            </div>
+        </div>
+
+        <div class="card mb-5">
+            <a href="#"><img class="card-img-top" src="img/latrena.jpg"></a>
+            <div class="card-body">
+                <h3 class="card-title">La trena</h3>
+                <p class="card-text">Laetitia Colombani</p>
+                <p class="badge badge-pill">18,00€</p>
+            </div>
+        </div>
+
+        <div class="card mb-5">
+            <a href="#"><img class="card-img-top" src="img/lestiu.jpg"></a>
+            <div class="card-body">
+                <h3 class="card-title">L'estiu circular</h3>
+                <p class="card-text">Marion Brunet</p>
+                <p class="badge badge-pill">16,50€</p>
+            </div>
+        </div>
+
+        <div class="card mb-5">
+            <a href="#"><img class="card-img-top" src="img/lultim.jpg"></a>
+            <div class="card-body">
+                <h3 class="card-title">L'últim patriarca</h3>
+                <p class="card-text">Najat El Hachmi</p>
+                <p class="badge badge-pill">8,95€</p>
+            </div>
+        </div>
+
+        <div class="card mb-5">
+            <a href="#"><img class="card-img-top" src="img/quan.jpg"></a>
+            <div class="card-body">
+                <h3 class="card-title">Quan la música ho és tot</h3>
+                <p class="card-text">Haruki Murakami</p>
+                <p class="badge badge-pill">19,90€</p>
+            </div>
+        </div>
+
+        <div class="card mb-5">
+            <a href="#"><img class="card-img-top" src="img/que.jpg"></a>
+            <div class="card-body">
+                <h3 class="card-title">No t'expliquin contes</h3>
+                <p class="card-text">Natza Farré</p>
+                <p class="badge badge-pill">15,90€</p>
+            </div>
+        </div>
+
+        <div class="card mb-5">
+            <a href="#"><img class="card-img-top" src="img/res.jpg"></a>
+            <div class="card-body">
+                <h3 class="card-title">Res no s'oposa a la nit</h3>
+                <p class="card-text">Delphine De Vigan</p>
+                <p class="badge badge-pill">19,90€</p>
+            </div>
+        </div>
+
+        <div class="card mb-5">
+            <a href="#"><img class="card-img-top" src="img/tardor.jpg"></a>
+            <div class="card-body">
+                <h3 class="card-title">Tardor</h3>
+                <p class="card-text">Ali Smith</p>
+                <p class="badge badge-pill">19,00€</p>
+            </div>
+        </div>
+
+        <div class="card mb-5">
+            <a href="#"><img class="card-img-top" src="img/tirant.jpg"></a>
+            <div class="card-body">
+                <h3 class="card-title">Tirant lo Blanc</h3>
+                <p class="card-text">Joanot Martorell</p>
+                <p class="badge badge-pill">23,15€</p>
+            </div>
+        </div>
+   
+    </section>
+
+    <section class="signUp row">
+
+        <h2 class="col-12 col-md-4 col-xl-6 pl-5 pt-5 pt-md-0">Uneix-te a la comunitat de Llegim.cat!</h2>
+        <form action="inscripcio.php" method="post" class="col-12 col-md-7 col-xl-5 p-5">
+            <input type="text" id="nom" placeholder="Nom" class="form-control mb-2 mt-md-2 mt-xl-3 mb-xl-3">
+            <input type="text" id="cognoms" placeholder="Cognoms" class="form-control mb-2 mt-xl-3 mb-xl-3">
+            <input type="text" id="usuari" placeholder="Usuari" class="form-control mb-2 mt-xl-3 mb-xl-3>
+            <input type="text" id="email" placeholder="E-mail" class="form-control mb-2 mt-xl-3 mb-xl-3">
+            <input type="text" id="contrasenya" placeholder="Contrasenya" class="form-control mb-2 mt-xl-3 mb-xl-3">
+            <input type="text" id="codi" placeholder="Codi postal" class="form-control col-6 mb-2 mt-xl-3">
+            
+            <input type="submit" value="REGISTRA'T" class="btn mb-2 mb-xl-3">
+        </form>
+
+    </section>
+
+    <section class="recomanacions row p-4 justify-content-between align-items-center">
+
+        <div class="recomanats col-12 col-md-6">
+            <h2 class="mb-4 mt-4 mt-md-0">Les llibreries recomanen</h2>
+            <p class="mb-5">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Inventore amet, perferendis, dolorum magni nulla doloremque ea perspiciatis delectus fugit accusantium repudiandae? Ut expedita quasi repudiandae veritatis a dolores aperiam hic!</p>
+            
+            <div class="llibresRec row justify-content-center justify-content-xl-around">        
+                <div class="card mb-4 mb-md-0 mr-md-2 mr-xl-0">
+                    <a href="#"><img src="img/tiene.jpg"></a>
+                    <div class="card-body d-md-none d-xl-block">
+                        <h3 class="card-title">Tiene que ser aquí</h3>
+                        <p class="card-text">Maggie O'Farrell</p>
+                        <p class="badge badge-pill">22,75€</p>
+                    </div>
+                </div>
+
+                <div class="card mb-4 mb-md-0 mr-md-2 mr-xl-0">
+                    <a href="#"><img src="img/elcastig.jpg"></a>
+                    <div class="card-body d-md-none d-xl-block">
+                        <h3 class="card-title">El càstig</h3>
+                        <p class="card-text">Guillem Sala</p>
+                        <p class="badge badge-pill">18,00€</p>
+                    </div>
+                </div>
+
+                <div class="card mb-4 mb-md-0">
+                    <a href="#"><img src="img/nodiguis.jpg"></a>
+                    <div class="card-body d-md-none d-xl-block">
+                        <h3 class="card-title">No diguis res</h3>
+                        <p class="card-text">Patrick Radden Keefe</p>
+                        <p class="badge badge-pill">22,90€</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="llibreria col-12 col-md-6 p-4">
+            <div class="card-llibreria">
+                <a href="https://www.documenta-bcn.com" target="_blank"><img class="documenta" src="img/documenta.jpg"></a>
+                <div class="card-body">
+                    <h3 class="card-title">Llibreria Documenta</h3>
+                    <p class="card-text">L’any 1975, Documenta va obrir les seves portes disposada a ser una llibreria diferent, especialitzada en literatura, art i ciències humanes. Els llibres haurien de ser en català, castellà, anglès i francès. La qualitat havia de primar sobre altres criteris.</p>
+                    <p class="card-text">Han passat més de 40 anys i segueixen mantenint el projecte i la línia que els va il·lusionar: encara hi ha molt camí a fer en defensa dels bons llibres d’art, història, antropologia, filosofia i literatura.</p>
+                    <a href="https://www.documenta-bcn.com" target="_blank">www.documenta-bcn.com</a>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+    <footer class="navbar m-0 p-0">
+        <a href="#" class="col-md-3 col-xl-2 h-100" id="marca">©Llegim.cat</a>
+
+        <a href="#" class="col-md-3 col-xl-2 h-100" id="termes">Termes i condicions</a>
+
+        <a href="#" class="col-md-3 col-xl-2 h-100" id="contacte">Contacte</a>
+
+        <a href="#" class="col-4 col-md-1 col-xl-2 h-100" id="twitter"><i class="fab fa-twitter"></i></a>
+
+        <a href="#" class="col-4 col-md-1 col-xl-2 h-100" id="instagram"><i class="fab fa-instagram"></i></a>
+
+        <a href="#" class="col-4 col-md-1 col-xl-2 h-100" id="youtube"><i class="fab fa-youtube"></i></a>
+
+    </footer>
+
+    <!-- Modal - ha d'estar a prop del tag body perquè es vegi davant del fons -->    
+    <div class="modal fade" id="modalUsuari" tabindex="-1" role="dialog" aria-labelledby="modalUsuariLogin" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLongTitle">El teu compte Llegim.cat</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">    
+                        <form class="px-3 py-4">
+                            <div class="form-group">
+                                <label for="FormEmail">E-mail</label>
+                                <input type="email" class="form-control" id="exampleDropdownFormEmail1" placeholder="email@exemple.com">
+                            </div>
+                            <div class="form-group">
+                                <label for="FormPassword">Contrasenya</label>
+                                <input type="password" class="form-control" id="exampleDropdownFormPassword1" placeholder="Contrasenya">
+                            </div>
+                            <div class="form-check">
+                                <input type="checkbox" class="form-check-input" id="dropdownCheck">
+                                <label class="form-check-label" for="dropdownCheck">
+                                Recorda'm
+                                </label>
+                            </div>
+                            <button type="submit" class="btn">Entra</button>
+                        </form>
+                </div>
+                <div class="modal-footer">
+                    <a class="dropdown-item" href="#">No tens compte? <u>Crea'n un</u></a>
+                    <a class="dropdown-item" href="#">Has oblidat la contrasenya?</a>
+                </div> 
+            </div>
+        </div>
+    </div>
+
+
+    <!-- jQuery and Bootstrap Bundle (includes Popper) -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
+
+</body>
+
+</html>
