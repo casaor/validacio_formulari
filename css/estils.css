@@ -34,6 +34,14 @@ a {
   background-color: #97E6A3 !important;
 }
 
+.form-control:invalid {
+  background-image: none !important;
+}
+
+.was-validated .form-control:valid {
+  background-image: none !important;
+}
+
 /* SECCIONS */
 .navbar {
   /*box-shadow: 0 2px 4px 0 rgba(66, 102, 72, 0.2);*/
@@ -574,6 +582,9 @@ footer #youtube:hover {
   }
   .filtre {
     font-size: 1rem !important;
+  }
+  .signUp h2 {
+    font-size: 1.8rem !important;
   }
   .llibresRec .card {
     width: 30% !important;
